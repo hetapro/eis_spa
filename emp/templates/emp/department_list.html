@@ -1,0 +1,18 @@
+  <h2 class="alert-warning">List of Department</h2><hr>
+       <div id="error"></div>
+       <table class="table table-bordered" id="department_list">
+            <tr>
+                <th>Department_Name</th>
+                <th>View Employee details</th>
+                <th>Edit details</th>
+                <th> Delete??</th>
+            </tr>
+       </table>
+       <b><div id="noData"></div></b><br/><br/>
+
+
+  <span class="btn btn-primary" ><a href="#/department_list/" style="color: #ffffff" >BACK</a></span>
+    <span class="btn btn-primary"><a href="#/new_department/new/0/" style="color:#ffffff">ADD New Department</a></span>
+   <!--input type="button" name="back" value="Back" class="btn btn-primary" id="back" />
+  <input type="button" name="submit1" id="new" class="btn btn-primary" value="Add New Department?" /-->
+    <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='{{ STATIC_URL }}images/demo_wait.jpg' width="64" height="64" /><br>Loading..</div>

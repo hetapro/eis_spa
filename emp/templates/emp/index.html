@@ -1,0 +1,34 @@
+<div id="main">
+ {% extends "base.html" %}
+{% block title %}Home page{% endblock title %}
+{% block js %}<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script-->
+    <!--script src="{{ STATIC_URL }}js/index.js"></script-->
+    <script src="{{ STATIC_URL }}js/sammy.js"></script>
+    <script>(function ($) {
+
+    var app = $.sammy('#main', function () {
+
+        this.get('#/', function (context) {
+            context.log("Hello");
+        });
+
+        this.get('#/department_details/', function (context) {
+            context.render("/emp/department_details/").appendTo(context.$element());
+
+
+        });
+       // this.get("#/another/:id/", function (context) {
+        //    context.log("another page with id = " + context.params["id"]);
+      //  });
+    });
+
+    $(function (context) {
+        app.run('#/');
+    });
+
+})(jQuery);</script>
+
+    {% endblock js %}
+
+
+</div>

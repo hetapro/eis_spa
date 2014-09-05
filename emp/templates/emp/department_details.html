@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}List of Department{% endblock title %}
+{% block js %}
+<script src="{{ STATIC_URL }}js/list1.js"> </script>
+{% endblock js %}
+{% block content %}
+    <center>
+    <hr><hr><hr>
+        <div id="listdepartment">
+     <h2 class="alert-warning">List of Department</h2><hr>
+
+        <div id="error"></div>
+        <table class="table table-bordered" id="department_list">
+            <tr>
+
+                <th>Department_Name</th>
+                <th>View Employee details</th>
+                <th>Edit details</th>
+                <th> Delete??</th>
+            </tr>
+        </table>
+        <b><div id="noData"></div></b><br/><br/>
+    <input type="button" name="back" value="Back" class="btn btn-primary" id="back" />
+    <input type="button" name="submit1" id="new" class="btn btn-primary" value="Add New Department?" />
+    </div>
+    <div id="adddepartment" style="display: none;">
+    <h2 class="alert-warning">Add New Departmnet</h2><hr>
+        <table>
+    <tr><td><label for="id_department">Department Name:</label></td><td><input type="text" name="department" id="id_department" class="department" /></td></tr>
+        <tr><td></td><td><div id="error1"></div></td></tr>
+            </table><br/><br/>
+
+
+        <input type="button" name="back" value="Back" class="btn btn-primary" id="back1" />
+        <input type="button" name="add" value="Add" class="btn btn-primary" id="add" />
+        <input type="button" name="reset" value="RESET" id="reset_dept" class="btn btn-primary" />
+    </div>
+    <div id="updatedepartment" style="display: none">
+
+        <h2 class="alert-warning">Edit Department</h2>
+        <table>
+        <tr><td><label for="id_department1">Department Name:</label></td><td><input type="text" maxlength="30" name="dept" id="id_department1"  class="department" /></td></tr>
+         <tr><td></td><td><div id="error2"></div></td></tr>
+            </table><br/><br/>
+        <input type="button" name="back" value="Back" class="btn btn-primary" id="back2" />
+        <input type="button" name="update" value="Update" class="update btn btn-primary" />
+
+        <br/><br/>
+    </div>
+     <div id="viewdetails" style="display: none">
+        <h2 class="alert-warning" id="viewdet"></h2>
+        <table class="table table-bordered" id="emp_list">
+            <tr>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email_id</th>
+                <th>Mob_no</th>
+                <th>Designation</th>
+            </tr>
+        </table>
+         <input type="button" name="back" value="Back" class="btn btn-primary" id="back3" />
+     </div>
+    <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='{{ STATIC_URL }}images/demo_wait.jpg' width="64" height="64" /><br>Loading..</div>
+</center>
+{% endblock content %}
+
+
+

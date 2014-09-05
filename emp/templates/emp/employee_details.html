@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}List of Employee{% endblock title %}
+{% block js %}<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script -->
+    <script src="{{ STATIC_URL }}js/list.js"></script>
+    {% endblock js %}
+{% block content %}
+    <center>
+    <hr><hr><hr>
+
+    <div id="employeelist" >
+    <h2 class="alert-warning">List of Employees</h2>
+    <table class="table table-bordered" id="emp_list1">
+            <tr>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email_id</th>
+                <th>Mob_no</th>
+                <th>Designation</th>
+                 <th>Department</th>
+                <th>View details</th>
+                <th>Edit Record</th>
+                 <th>Delete Record</th>
+            </tr>
+    </table>
+        <input type="button" name="back" id="back" value="Back" class="btn btn-primary" />
+       <input type="button" name="newwmployee" id="newemployee" value="Add New Employee?" class="btn btn-primary" />
+ </div>
+ <div id="editemployee" style="display: none">
+      <h2 class="alert-warning">Edit Employee Details</h2><hr>
+
+        <table class="table table-bordered" style="width: 60%">
+       <tr><th> Name:</th><td><input type="text" maxlength="30" name="e2" id="ename1"/><div id="name1"></div></td></tr>
+        <tr><th>  Age:</th><td><input type="text" maxlength="30" name="e3" id="age1" /><div id="name2"></div></td></tr>
+       <tr><th>  Email id:</th><td><input type="text" maxlength="30" name="e4" id="email1"/><div id="name3"></div></td></tr>
+        <tr><th> Mobile No:</th><td><input type="text" maxlength="30" name="e5" id="mob1"/><div id="name4"></div></td></tr>
+        <tr><th> Designation:</th><td><input type="text" maxlength="30" name="e6" id="designation1"/><div id="name5"></div></td></tr>
+        <tr><th> Department:</th><td><select name="e7" id="dropdepartment"></select>
+        </td></tr>
+
+        </table>
+       <input type="button" name="back" id="back1" value="Back" class="btn btn-primary" />
+        <input type="button" name="update" value="Update" class="update btn btn-primary" />
+
+ </div>
+    <div id="viewemployee" style="display: none">
+         <h2 class="alert-warning" id="viewemp"></h2><hr>
+
+    <table class="table table-striped" id="viewtable" border="1" style="width: 60%">
+        <tr></tr><tr></tr>
+        <tr><th>Name</th><th id="ename2"></th></tr>
+        <tr><th>Age</th><th id="age2"></th></tr>
+        <tr><th>Email id</th><th id="email2"></th></tr>
+        <tr><th>Mobile No</th><th id="mob2"></th></tr>
+        <tr><th>Designation</th><th id="designation2"></th></tr>
+        <tr><th>Department</th><th id="department2"></th></tr>
+    </table>
+    <input type="button" name="back" id="back2" value="Back" class="btn btn-primary" />
+    </div>
+ <div id="newemp" style="display: none">
+      <h2 class="alert-warning">Add New Employee Details</h2><hr>
+
+        <table class="table table-bordered" style="width: 60%">
+       <tr><th> Name:</th><td><input type="text" maxlength="30" name="e2" id="ename_new"/><div id="new1"></div></td></tr>
+        <tr><th>  Age:</th><td><input type="text" maxlength="30" name="e3" id="age_new" /><div id="new2"></div></td></tr>
+       <tr><th>  Email id:</th><td><input type="text" maxlength="30" name="e4" id="email_new"/><div id="new3"></div></td></tr>
+        <tr><th> Mobile No:</th><td><input type="text" maxlength="30" name="e5" id="mob_new"/><div id="new4"></div></td></tr>
+        <tr><th> Designation:</th><td><input type="text" maxlength="30" name="e6" id="designation_new"/><div id="new5"></div></td></tr>
+        <tr><th> Department:</th><td><select name="e7" id="dropdepartment1"></select>
+        </td></tr>
+
+        </table>
+       <input type="button" name="back" id="back3" value="Back" class="btn btn-primary" />
+        <input type="button" name="add" id="add" value="Add" class="btn btn-primary" />
+        <input type="button" name="Reset" value="reset" id="reset_emp" class="btn btn-primary" />
+
+ </div>
+    <div id="newerror" style="display: none">
+        <pre class="alert-info">Currently there is no department. Add department first.</pre>
+
+    </div>
+    <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='{{ STATIC_URL }}images/demo_wait.jpg' width="64" height="64" /><br>Loading..</div>
+
+</center>
+
+{% endblock content %}
+

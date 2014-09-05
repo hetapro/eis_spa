@@ -1,0 +1,19 @@
+<div id="editemployee">
+      <h2 class="alert-warning">Edit Employee Details</h2><hr>
+
+        <table class="table table-bordered" style="width: 60%">
+       <tr><th> Name:</th><td><input type="text" maxlength="30" name="e2" id="ename1"/><div id="name1"></div></td></tr>
+        <tr><th>  Age:</th><td><input type="text" maxlength="30" name="e3" id="age1" /><div id="name2"></div></td></tr>
+       <tr><th>  Email id:</th><td><input type="text" maxlength="30" name="e4" id="email1"/><div id="name3"></div></td></tr>
+        <tr><th> Mobile No:</th><td><input type="text" maxlength="30" name="e5" id="mob1"/><div id="name4"></div></td></tr>
+        <tr><th> Designation:</th><td><input type="text" maxlength="30" name="e6" id="designation1"/><div id="name5"></div></td></tr>
+        <tr><th> Department:</th><td><select name="e7" id="dropdepartment"></select>
+        </td></tr>
+
+        </table>
+        <span class="btn btn-primary" ><a href="#/employee_list/" style="color: #ffffff" >BACK</a></span>
+        <span class="btn btn-primary" ><a class="update" style="color: #ffffff" >UPDATE</a></span>
+
+        <br/><br/>
+      <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='{{ STATIC_URL }}images/demo_wait.jpg' width="64" height="64" /><br>Loading..</div>
+    </div>

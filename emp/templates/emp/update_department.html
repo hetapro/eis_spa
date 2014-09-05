@@ -1,0 +1,13 @@
+ <div id="updatedepartment">
+
+        <h2 class="alert-warning">Edit Department</h2>
+        <table>
+        <tr><td><label for="id_department1">Department Name:</label></td><td><input type="text" maxlength="30" name="dept" id="id_department1"  class="department" /></td></tr>
+         <tr><td></td><td><div id="error2"></div></td></tr>
+            </table><br/><br/>
+       <span class="btn btn-primary" ><a href="#/department_list/" style="color: #ffffff" >BACK</a></span>
+        <span class="btn btn-primary" ><a class="update" style="color: #ffffff" >UPDATE</a></span>
+
+        <br/><br/>
+      <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='{{ STATIC_URL }}images/demo_wait.jpg' width="64" height="64" /><br>Loading..</div>
+    </div>
